@@ -1,0 +1,550 @@
+/* ECMAScript Algorithm Blocks - Scoped Styles */
+/* Auto-extracted from ecmarkup.css */
+
+/* IBM Plex fonts via Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+.emu-block {
+  --foreground-color: #111;
+  --background-color: #fff;
+  --link-foreground-color: #206ca7;
+  --annotation-foreground-color: brown;
+  --var-foreground-color: #218379;
+  --note-background-color: #e9fbe9;
+  --note-border-color: #52e052;
+  --params-foreground-color: #2aa198;
+  --opt-foreground-color: #b58900;
+  --ac-body-border-color: #ddd;
+}
+.dark .emu-block {
+  --foreground-color: #fcfcfc;
+  --background-color: #171717;
+  --link-foreground-color: #439de2;
+  --annotation-foreground-color: brown;
+  --var-foreground-color: #4fb6ab;
+  --note-background-color: #1b2f1b;
+  --note-border-color: #31a331;
+  --params-foreground-color: #57d0c7;
+  --opt-foreground-color: #d8b750;
+  --ac-body-border-color: #444;
+}
+
+/* .emu-block {font-family: 'IBM Plex Serif'} */
+.emu-block {
+  font-family: "IBM Plex Serif", serif;
+  word-wrap: break-word;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "IBM Plex Serif", serif;
+  /* font-variant-numeric: slashed-zero; */
+  padding: 0;
+  margin: 0;
+  color: var(--foreground-color);
+}
+.emu-block ol.toc {
+  list-style: none;
+  padding-left: 0;
+}
+.emu-block ol.toc ol.toc {
+  padding-left: 2ex;
+  list-style: none;
+}
+.emu-block h1 {
+  font-size: 2.67em;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1em;
+
+  margin-block-start: revert;
+  /* margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate; */
+}
+.emu-block p {
+  line-height: 1.5;
+  /* display: revert; */
+  margin-block-start: revert;
+  margin-block-end: revert;
+  /* margin-bottom: revert;
+  margin-top: revert; */
+  margin-inline-start: revert;
+  margin-inline-end: revert;
+  /* unicode-bidi: isolate; */
+}
+
+.emu-block ol {
+  line-height: 1.5;
+  /* display: revert; */
+  margin-block-start: revert;
+  margin-block-end: revert;
+  /* margin-bottom: revert;
+  margin-top: revert; */
+  margin-inline-start: revert;
+  margin-inline-end: revert;
+  padding-inline-start: revert;
+  /* unicode-bidi: isolate; */
+}
+.emu-block li + li, .emu-block li > ol, .emu-block li > ul {
+  margin-top: revert;
+}
+
+.emu-block a {
+  text-decoration: none;
+  color: var(--link-foreground-color);
+  font-weight: revert;
+}
+.emu-block var.field {
+  font: inherit;
+  color: inherit;
+}
+.emu-block var.field::before {
+  content: "\2060";
+}
+/* ==================================== */
+.emu-block span[aria-hidden="true"] {
+  font-size: 0;
+  white-space: pre;
+}
+.emu-block a.e-user-code,
+.emu-block span.e-user-code {
+  white-space: nowrap;
+}
+.emu-block a.e-user-code::before,
+.emu-block span.e-user-code::before {
+  display: none;
+  color: var(--annotation-foreground-color);
+  background-color: var(--background-color);
+  border: 2pt solid var(--annotation-foreground-color);
+  padding: 0.3ex;
+  margin: 0 0.25em 0 0;
+  line-height: normal;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 900;
+  font-size: x-small;
+  content: "UC";
+}
+.emu-block a.e-user-code:hover::before,
+.emu-block span.e-user-code:hover::before {
+  background-color: var(--annotation-foreground-color);
+  color: var(--background-color);
+}
+.emu-block emu-const {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+.emu-block emu-val {
+  font-weight: 700;
+}
+.emu-block emu-alg li.exit::before {
+  display: none;
+  border: 2pt solid var(--annotation-foreground-color);
+  font-size: small;
+  color: var(--annotation-foreground-color);
+  padding: 0 0.25em;
+  background-color: var(--background-color);
+  content: "⏎";
+  margin-right: 0.25em;
+  line-height: 15px;
+  vertical-align: middle;
+}
+.emu-block emu-alg ol,
+.emu-block emu-alg ol ol ol ol,
+.emu-block emu-alg ol.nested-once ol ol,
+.emu-block emu-alg ol.nested-thrice,
+.emu-block emu-alg ol.nested-twice ol {
+  list-style-type: decimal;
+}
+.emu-block emu-alg ol ol,
+.emu-block emu-alg ol ol ol ol ol,
+.emu-block emu-alg ol.nested-four-times,
+.emu-block emu-alg ol.nested-once,
+.emu-block emu-alg ol.nested-once ol ol ol,
+.emu-block emu-alg ol.nested-thrice ol,
+.emu-block emu-alg ol.nested-twice ol ol {
+  list-style-type: lower-alpha;
+}
+.emu-block emu-alg ol ol ol,
+.emu-block emu-alg ol ol ol ol ol ol,
+.emu-block emu-alg ol.nested-four-times ol,
+.emu-block emu-alg ol.nested-lots,
+.emu-block emu-alg ol.nested-lots ol,
+.emu-block emu-alg ol.nested-once ol,
+.emu-block emu-alg ol.nested-once ol ol ol ol,
+.emu-block emu-alg ol.nested-thrice ol ol,
+.emu-block emu-alg ol.nested-twice,
+.emu-block emu-alg ol.nested-twice ol ol ol {
+  list-style-type: lower-roman;
+}
+.emu-block emu-alg ol.ac-body {
+  border-left: 3px solid var(--ac-body-border-color);
+  border-radius: 0 0 0 20px;
+  padding-bottom: 5px;
+}
+.emu-block emu-eqn {
+  display: block;
+  margin-left: 4em;
+}
+.emu-block emu-eqn.inline {
+  display: inline;
+  margin: 0;
+}
+.emu-block emu-eqn div:first-child {
+  margin-left: -2em;
+}
+.emu-block emu-note {
+  margin: 1em 0;
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  color: inherit;
+  border-left: 5px solid var(--note-border-color);
+  background: var(--note-background-color);
+  padding: 10px 10px 10px 0;
+  overflow-x: auto;
+}
+.emu-block emu-note > span.note {
+  white-space: nowrap;
+  flex-grow: 0;
+  flex-shrink: 1;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+.emu-block emu-note[type="editor"] {
+  border-left-color: var(--note-editor-border-color);
+}
+.emu-block emu-note > div.note-contents {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+}
+.emu-block emu-note > div.note-contents > p:first-of-type {
+  margin-top: 0;
+}
+.emu-block emu-note > div.note-contents > p:last-of-type {
+  margin-bottom: 0;
+}
+.emu-block emu-table:not(.code) td code {
+  white-space: normal;
+}
+.emu-block emu-figure,
+.emu-block emu-production {
+  display: block;
+}
+.emu-block emu-example {
+  display: block;
+  margin: 1em 3em;
+}
+.emu-block emu-example figure figcaption {
+  margin-top: 0.5em;
+  text-align: left;
+}
+.emu-block emu-example figure,
+.emu-block emu-figure figure,
+.emu-block emu-table figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emu-block emu-grammar[type="definition"] emu-production,
+.emu-block emu-grammar[type="example"] emu-production {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 5ex;
+}
+.emu-block emu-grammar.inline,
+.emu-block emu-grammar.inline emu-production emu-rhs,
+.emu-block emu-grammar[collapsed] emu-production emu-rhs,
+.emu-block emu-production.inline,
+.emu-block emu-production.inline emu-rhs,
+.emu-block emu-production[collapsed] emu-rhs {
+  display: inline;
+  padding-left: 0.5ex;
+  margin-left: 0;
+}
+.emu-block emu-grammar[collapsed] emu-production,
+.emu-block emu-production[collapsed] {
+  margin: 0;
+}
+.emu-block emu-constraints {
+  font-size: 0.75em;
+  margin-right: 0.5ex;
+}
+.emu-block emu-gann,
+.emu-block emu-production emu-t,
+.emu-block emu-rhs emu-nt {
+  margin-right: 0.5ex;
+}
+.emu-block emu-gann emu-gprose:last-child,
+.emu-block emu-gann emu-nt:last-child,
+.emu-block emu-gann emu-t:last-child {
+  margin-right: 0;
+}
+.emu-block emu-geq {
+  margin-left: 0.5ex;
+  font-weight: 700;
+}
+.emu-block emu-oneof {
+  font-weight: 700;
+  margin-left: 0.5ex;
+}
+.emu-block emu-nt {
+  display: inline;
+  font-style: italic;
+  white-space: nowrap;
+  text-indent: 0;
+}
+.emu-block emu-nt a,
+.emu-block emu-nt a:visited {
+  color: var(--nt-link-foreground-color);
+}
+.emu-block emu-t {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  white-space: nowrap;
+  text-indent: 0;
+}
+.emu-block emu-rhs {
+  display: block;
+  padding-left: 75px;
+  text-indent: -25px;
+}
+.emu-block emu-production:not([collapsed]) emu-rhs {
+  border: 0.2ex dashed transparent;
+}
+.emu-block emu-production:not([collapsed]) emu-rhs:hover {
+  border-color: var(--production-rhs-border-color);
+  background-color: var(--production-rhs-background-color);
+}
+.emu-block emu-mods {
+  font-size: 0.85em;
+  vertical-align: sub;
+  font-style: normal;
+  font-weight: 400;
+}
+.emu-block emu-opt,
+.emu-block emu-params {
+  margin-right: 1ex;
+  font-family: "IBM Plex Mono", monospace;
+}
+.emu-block emu-constraints,
+.emu-block emu-params {
+  color: var(--params-foreground-color);
+}
+.emu-block emu-opt {
+  color: var(--opt-foreground-color);
+}
+.emu-block emu-gprose {
+  font-size: 0.9em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.emu-block emu-production emu-gprose {
+  margin-right: 1ex;
+}
+.emu-block h1 .secnum {
+  text-decoration: none;
+  margin-right: 5px;
+}
+.emu-block emu-annex h1,
+.emu-block emu-clause h1,
+.emu-block emu-intro h1,
+.emu-block h2 {
+  font-size: 2em;
+}
+.emu-block emu-annex emu-annex h1,
+.emu-block emu-annex h2,
+.emu-block emu-clause emu-clause h1,
+.emu-block emu-clause h2,
+.emu-block emu-intro emu-intro h1,
+.emu-block emu-intro h2,
+.emu-block h3 {
+  font-size: 1.56em;
+}
+.emu-block emu-annex emu-annex emu-annex h1,
+.emu-block emu-annex emu-annex h2,
+.emu-block emu-annex h3,
+.emu-block emu-clause emu-clause emu-clause h1,
+.emu-block emu-clause emu-clause h2,
+.emu-block emu-clause h3,
+.emu-block emu-intro emu-intro emu-intro h1,
+.emu-block emu-intro emu-intro h2,
+.emu-block emu-intro h3,
+.emu-block h4 {
+  font-size: 1.25em;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex h1,
+.emu-block emu-annex emu-annex emu-annex h2,
+.emu-block emu-annex emu-annex h3,
+.emu-block emu-annex h4,
+.emu-block emu-clause emu-clause emu-clause emu-clause h1,
+.emu-block emu-clause emu-clause emu-clause h2,
+.emu-block emu-clause emu-clause h3,
+.emu-block emu-clause h4,
+.emu-block emu-intro emu-intro emu-intro emu-intro h1,
+.emu-block emu-intro emu-intro emu-intro h2,
+.emu-block emu-intro emu-intro h3,
+.emu-block emu-intro h4,
+.emu-block h5 {
+  font-size: 1.11em;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex emu-annex h1,
+.emu-block emu-annex emu-annex emu-annex emu-annex h2,
+.emu-block emu-annex emu-annex emu-annex h3,
+.emu-block emu-annex emu-annex h4,
+.emu-block emu-annex h5,
+.emu-block emu-clause emu-clause emu-clause emu-clause emu-clause h1,
+.emu-block emu-clause emu-clause emu-clause emu-clause h2,
+.emu-block emu-clause emu-clause emu-clause h3,
+.emu-block emu-clause emu-clause h4,
+.emu-block emu-clause h5,
+.emu-block emu-intro emu-intro emu-intro emu-intro emu-intro h1,
+.emu-block emu-intro emu-intro emu-intro emu-intro h2,
+.emu-block emu-intro emu-intro emu-intro h3,
+.emu-block emu-intro emu-intro h4,
+.emu-block emu-intro h5,
+.emu-block h6 {
+  font-size: 1em;
+}
+.emu-block emu-annex[id],
+.emu-block emu-clause[id],
+.emu-block emu-intro[id] {
+  scroll-margin-top: 2ex;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex emu-annex emu-annex h1,
+.emu-block emu-annex emu-annex emu-annex emu-annex emu-annex h2,
+.emu-block emu-annex emu-annex emu-annex emu-annex h3,
+.emu-block emu-annex emu-annex emu-annex h4,
+.emu-block emu-annex emu-annex h5,
+.emu-block emu-annex h6,
+.emu-block emu-clause emu-clause emu-clause emu-clause emu-clause emu-clause h1,
+.emu-block emu-clause emu-clause emu-clause emu-clause emu-clause h2,
+.emu-block emu-clause emu-clause emu-clause emu-clause h3,
+.emu-block emu-clause emu-clause emu-clause h4,
+.emu-block emu-clause emu-clause h5,
+.emu-block emu-clause h6,
+.emu-block emu-intro emu-intro emu-intro emu-intro emu-intro emu-intro h1,
+.emu-block emu-intro emu-intro emu-intro emu-intro emu-intro h2,
+.emu-block emu-intro emu-intro emu-intro emu-intro h3,
+.emu-block emu-intro emu-intro emu-intro h4,
+.emu-block emu-intro emu-intro h5,
+.emu-block emu-intro h6 {
+  font-size: 0.9em;
+}
+.emu-block emu-annex,
+.emu-block emu-clause,
+.emu-block emu-intro {
+  display: block;
+  margin-top: 4em;
+}
+.emu-block emu-annex emu-annex,
+.emu-block emu-clause emu-clause,
+.emu-block emu-intro emu-intro {
+  margin-top: 3.12em;
+}
+.emu-block emu-annex emu-annex emu-annex,
+.emu-block emu-clause emu-clause emu-clause,
+.emu-block emu-intro emu-intro emu-intro {
+  margin-top: 2.5em;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex,
+.emu-block emu-clause emu-clause emu-clause emu-clause,
+.emu-block emu-intro emu-intro emu-intro emu-intro {
+  margin-top: 2.22em;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex emu-annex,
+.emu-block emu-clause emu-clause emu-clause emu-clause emu-clause,
+.emu-block emu-intro emu-intro emu-intro emu-intro emu-intro {
+  margin-top: 2em;
+}
+.emu-block emu-annex emu-annex emu-annex emu-annex emu-annex emu-annex,
+.emu-block emu-clause emu-clause emu-clause emu-clause emu-clause emu-clause,
+.emu-block emu-intro emu-intro emu-intro emu-intro emu-intro emu-intro {
+  margin-top: 1.8em;
+}
+.emu-block #spec-container > emu-annex:first-of-type,
+.emu-block #spec-container > emu-clause:first-of-type,
+.emu-block #spec-container > emu-intro:first-of-type {
+  margin-top: 0;
+}
+.emu-block emu-table table {
+  margin: 0 auto;
+}
+.emu-block emu-table table,
+.emu-block table.real-table {
+  border-collapse: collapse;
+}
+.emu-block emu-table td,
+.emu-block emu-table th,
+.emu-block table.real-table td,
+.emu-block table.real-table th {
+  border: 1px solid var(--foreground-color);
+  padding: 0.4em;
+  vertical-align: baseline;
+}
+.emu-block emu-table th,
+.emu-block emu-table thead td,
+.emu-block table.real-table th {
+  background-color: var(--table-header-background-color);
+}
+.emu-block emu-table td {
+  background: var(--background-color);
+}
+.emu-block
+  #spec-container
+  :target:not(
+    emu-annex,
+    .emu-block emu-clause,
+    .emu-block emu-intro,
+    .emu-block emu-note,
+    .emu-block body
+  ) {
+  animation: 2.5s ease-out highlight-target-bg;
+}
+.emu-block del.block,
+.emu-block emu-grammar > del,
+.emu-block emu-grammar > ins,
+.emu-block emu-production > del,
+.emu-block emu-production > ins,
+.emu-block ins.block {
+  display: block;
+}
+.emu-block emu-rhs > del,
+.emu-block emu-rhs > ins {
+  display: inline;
+}
+.emu-block .menu-pane-header emu-nt,
+.emu-block .menu-pane-header emu-opt,
+.emu-block .menu-pane-header emu-t {
+  margin-right: 0;
+  display: inline;
+  color: inherit;
+}
+.emu-block .menu-pane-header emu-rhs {
+  display: inline;
+  padding-left: 0;
+  text-indent: 0;
+}
+.emu-block .menu-pane-header emu-geq {
+  margin-left: 0;
+}
+.emu-block #menu-trace-list li .secnum::after {
+  content: " ";
+}
+.emu-block h1 .secnum:empty {
+  margin: 0;
+  padding: 0;
+}
+
+/* var elements in algorithms */
+.emu-block var {
+  border-radius: 5px;
+  color: var(--var-foreground-color);
+  padding: 0 4px;
+  margin: 0 -4px;
+}

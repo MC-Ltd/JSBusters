@@ -20,8 +20,8 @@ export default withMermaid(
       ['link', { rel: 'stylesheet', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexSans-Bold-SlashedZero.woff2' }],
       ['link', { rel: 'stylesheet', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexSans-Regular-SlashedZero.woff2' }],
       // for cyrillic symbol https://fonts.google.com/specimen/IBM+Plex+Serif
-      ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com' }], // crossorigin>
-      ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' }],
+      // ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com' }], // crossorigin>
+      // ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' }],
 
       ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-0X1WBFSVS3' }],
       ['script', {}, `
@@ -33,6 +33,23 @@ export default withMermaid(
 
       ['script', { async: '', src: 'https://cloud.umami.is/script.js', 'data-website-id': '76fa3cd1-28e2-4a21-ac21-c1c569ae0057' }],
     ],
+
+    // vue: {
+    //   template: {
+    //     compilerOptions: {
+    //       isCustomElement: (tag) => tag.startsWith('emu-')
+    //     }
+    //   }
+    // },
+
+    /* Якщо потрібна темна/світла тема для коду в VitePress
+    markdown: {
+      theme: {
+        light: 'solarized-light',
+        dark: 'github-dark'
+      }
+    }
+    */
 
     locales: {
       uk: {
@@ -95,6 +112,13 @@ export default withMermaid(
           items: [
             { text: 'Тема 1', link: '/uk/section-1/topic-1' },
             { text: 'Тема 2', link: '/uk/section-1/topic-2' }
+          ]
+        },
+        {
+          text: 'ECMA Clauses',
+          items: [
+            { text: 'Object.assign', link: '/en/ecma_clauses/clause_Object_assign' },
+            { text: 'Object.create', link: '/en/ecma_clauses/clause_Object_create' },
           ]
         }
       ],

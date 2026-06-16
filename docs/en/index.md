@@ -1,5 +1,6 @@
 # Головна
-Ласкаво просимо!
+Welcome!
+
 
 <div class="info-card">
   <i class="fa fa-star"></i>

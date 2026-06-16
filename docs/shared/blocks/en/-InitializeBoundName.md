@@ -1,0 +1,15 @@
+<div class="emu-block">
+  <div id="spec-container">
+  <emu-clause id="sec-syntax-directed-operations">
+  <emu-clause id="sec-syntax-directed-operations-miscellaneous">
+    <emu-clause id="sec-runtime-semantics-bindinginitialization" oldids="sec-identifiers-runtime-semantics-bindinginitialization,sec-destructuring-binding-patterns-runtime-semantics-bindinginitialization" type="sdo" aoid="BindingInitialization">
+      <emu-clause id="sec-initializeboundname" type="abstract operation" aoid="InitializeBoundName">
+        <h1><span class="secnum">8.6.2.1</span> InitializeBoundName ( <var>name</var>, <var>value</var>, <var>environment</var> )</h1>
+        <p>The abstract operation InitializeBoundName takes arguments <var>name</var> (a String), <var>value</var> (an <emu-xref href="#sec-ecmascript-language-types" id="_ref_3462"><a href="ecmascript-data-types-and-values.html#sec-ecmascript-language-types">ECMAScript language value</a></emu-xref>), and <var>environment</var> (an <emu-xref href="#sec-environment-records" id="_ref_3463"><a href="executable-code-and-execution-contexts.html#sec-environment-records">Environment Record</a></emu-xref> or <emu-val>undefined</emu-val>) and returns either a <emu-xref href="#sec-completion-record-specification-type" id="_ref_3464"><a href="ecmascript-data-types-and-values.html#sec-completion-record-specification-type">normal completion containing</a></emu-xref> <emu-const>unused</emu-const> or an <emu-xref href="#sec-completion-record-specification-type" id="_ref_3465"><a href="ecmascript-data-types-and-values.html#sec-completion-record-specification-type">abrupt completion</a></emu-xref>. It performs the following steps when called:</p>
+        <emu-alg><ol><li><span aria-hidden="true" class="list-marker">1. </span>If <var>environment</var> is not <emu-val>undefined</emu-val>, then<ol><li><span aria-hidden="true" class="list-marker">   a. </span>Perform !&nbsp;<var>environment</var>.<emu-xref aoid="InitializeBinding" id="_ref_3466"><a href="executable-code-and-execution-contexts.html#abstract-initializebinding">InitializeBinding</a></emu-xref>(<var>name</var>, <var>value</var>).</li><li><span aria-hidden="true" class="list-marker">   b. </span>Return <emu-const>unused</emu-const>.</li></ol></li><li><span aria-hidden="true" class="list-marker">2. </span>Let <var>lhs</var> be ?&nbsp;<emu-xref aoid="ResolveBinding" id="_ref_3467"><a href="executable-code-and-execution-contexts.html#sec-resolvebinding" class="e-user-code">ResolveBinding</a></emu-xref>(<var>name</var>).</li><li><span aria-hidden="true" class="list-marker">3. </span>Return ?&nbsp;<emu-xref aoid="PutValue" id="_ref_3468"><a href="ecmascript-data-types-and-values.html#sec-putvalue" class="e-user-code">PutValue</a></emu-xref>(<var>lhs</var>, <var>value</var>).</li></ol></emu-alg>
+      </emu-clause>
+    </emu-clause>
+  </emu-clause>
+  </emu-clause>
+  </div>
+</div>
