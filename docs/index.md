@@ -3,7 +3,7 @@ layout: false
 ---
 
 <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; gap:2rem;">
-  <img src="./images/500x499.png" alt="Опис" width="500" class="my-image" />
+  <img src="./public/images/500x499.png" alt="Опис" width="500" class="my-image" />
   <!-- <h1>JSBusters</h1> -->
   <p>Оберіть мову / Choose language</p>
   <div style="display:flex; gap:1rem;">
