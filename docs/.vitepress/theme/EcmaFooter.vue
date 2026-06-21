@@ -7,6 +7,11 @@ const { frontmatter, lang } = useData()
   <footer v-if="frontmatter.ecmaFooter" class="ecma-footer">
 
     <template v-if="lang === 'uk'">
+      <p class="translation-disclaimer">
+        Це неофіційний переклад українською. У разі розбіжностей
+        офіційна англійська версія має пріоритет.
+      </p>
+
       Специфікація ECMAScript® 2026 © Ecma International.
       Використовується відповідно до
       <a href="https://tc39.es/ecma262/2026/multipage/copyright-and-software-license.html"

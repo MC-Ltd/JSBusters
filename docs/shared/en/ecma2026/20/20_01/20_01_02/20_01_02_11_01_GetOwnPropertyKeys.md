@@ -1,0 +1,17 @@
+<div class="emu-block">
+  <div id="spec-container">
+  <emu-clause id="sec-fundamental-objects">
+  <emu-clause id="sec-object-objects">
+  <emu-clause id="sec-properties-of-the-object-constructor">
+      <emu-clause id="sec-object.getownpropertysymbols" type="built-in function">
+        <emu-clause id="sec-getownpropertykeys" type="abstract operation" aoid="GetOwnPropertyKeys">
+          <h1><span class="secnum">20.1.2.11.1</span> GetOwnPropertyKeys ( <var>O</var>, <var>type</var> )</h1>
+          <p>The abstract operation GetOwnPropertyKeys takes arguments <var>O</var> (an <emu-xref href="#sec-ecmascript-language-types" id="_ref_9800"><a href="ecmascript-data-types-and-values.html#sec-ecmascript-language-types">ECMAScript language value</a></emu-xref>) and <var>type</var> (<emu-const>string</emu-const> or <emu-const>symbol</emu-const>) and returns either a <emu-xref href="#sec-completion-record-specification-type" id="_ref_9801"><a href="ecmascript-data-types-and-values.html#sec-completion-record-specification-type">normal completion containing</a></emu-xref> a <emu-xref href="#sec-list-and-record-specification-type" id="_ref_9802"><a href="ecmascript-data-types-and-values.html#sec-list-and-record-specification-type">List</a></emu-xref> of <emu-xref href="#property-key" id="_ref_9803"><a href="ecmascript-data-types-and-values.html#property-key">property keys</a></emu-xref> or a <emu-xref href="#sec-completion-record-specification-type" id="_ref_9804"><a href="ecmascript-data-types-and-values.html#sec-completion-record-specification-type">throw completion</a></emu-xref>. It performs the following steps when called:</p>
+          <emu-alg><ol><li><span aria-hidden="true" class="list-marker">1. </span>Let <var>obj</var> be ?&nbsp;<emu-xref aoid="ToObject" id="_ref_9805"><a href="abstract-operations.html#sec-toobject">ToObject</a></emu-xref>(<var>O</var>).</li><li><span aria-hidden="true" class="list-marker">2. </span>Let <var>keys</var> be ?&nbsp;<span class="e-user-code"><var>obj</var>.<var class="field">[[OwnPropertyKeys]]</var>()</span>.</li><li><span aria-hidden="true" class="list-marker">3. </span>Let <var>nameList</var> be a new empty <emu-xref href="#sec-list-and-record-specification-type" id="_ref_9806"><a href="ecmascript-data-types-and-values.html#sec-list-and-record-specification-type">List</a></emu-xref>.</li><li><span aria-hidden="true" class="list-marker">4. </span>For each element <var>nextKey</var> of <var>keys</var>, do<ol><li><span aria-hidden="true" class="list-marker">   a. </span>If <var>nextKey</var> <emu-xref href="#sec-ecmascript-language-types-symbol-type" id="_ref_9807"><a href="ecmascript-data-types-and-values.html#sec-ecmascript-language-types-symbol-type">is a Symbol</a></emu-xref> and <var>type</var> is <emu-const>symbol</emu-const>, or if <var>nextKey</var> <emu-xref href="#sec-ecmascript-language-types-string-type" id="_ref_9808"><a href="ecmascript-data-types-and-values.html#sec-ecmascript-language-types-string-type">is a String</a></emu-xref> and <var>type</var> is <emu-const>string</emu-const>, then<ol><li><span aria-hidden="true" class="list-marker">      i. </span>Append <var>nextKey</var> to <var>nameList</var>.</li></ol></li></ol></li><li><span aria-hidden="true" class="list-marker">5. </span>Return <var>nameList</var>.</li></ol></emu-alg>
+        </emu-clause>
+      </emu-clause>
+  </emu-clause>
+  </emu-clause>
+  </emu-clause>
+  </div>
+</div>

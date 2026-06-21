@@ -1,3 +1,15 @@
+# Переклади
+- 20.1.2.3.1 ObjectDefineProperties
+- 10.1.11 [[OwnPropertyKeys]]
+- 20.1.2.11.1 GetOwnPropertyKeys
+- 7.3.15 SetIntegrityLevel
+- 7.3.16 TestIntegrityLevel 
+- 7.3.23 EnumerableOwnProperties 
+- 7.3.25 CopyDataProperties
+
+
+
+
 # не дороблено
 - перевірити шрифти, щоб оригінальні працювали першими, а підтримка кириличних вмикалася з гугл-шрифтів
 - додати у .css форматування для:
