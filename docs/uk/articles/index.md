@@ -9,8 +9,8 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: 1
-      link: /uk/articles/1.md
+      text: article_001
+      link: /uk/articles/article_001.md
     # - theme: alt
     #   text: 7.3 Operations on Objects
     #   link: /uk/ecma2026/07/07_03/

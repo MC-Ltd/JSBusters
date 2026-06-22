@@ -1,11 +1,11 @@
 ---
 # layout: page
 ecmaFooter: true
-title: '1'
+title: 'article_001'
 date: 2025-06-dd
 ---
 
-# 1
+# article_001
 
 Давайте подивимося на ці алгоритми:
 
