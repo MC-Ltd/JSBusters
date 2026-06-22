@@ -124,22 +124,22 @@ export default withMermaid(
                             text: '6.1.7 The Object Type',
                             link: '/uk/ecma2026/06/06_01/clause_06_01_07_The_Object_Type.md',
                           },
-                          {
-                            text: '6.1.7.1 Property Attributes',
-                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
-                          },
-                          {
-                            text: '6.1.7.2 Object Internal Methods and Internal Slots',
-                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
-                          },
-                          {
-                            text: '6.1.7.3 Invariants of the Essential Internal Methods',
-                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
-                          },
-                          {
-                            text: '6.1.7.4 Well-Known Intrinsic Objects',
-                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
-                          },
+                          // {
+                          //   text: '6.1.7.1 Property Attributes',
+                          //   link: '/uk/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.2 Object Internal Methods and Internal Slots',
+                          //   link: '/uk/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.3 Invariants of the Essential Internal Methods',
+                          //   link: '/uk/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.4 Well-Known Intrinsic Objects',
+                          //   link: '/uk/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
+                          // },
                         ],
                       },
                     ],
@@ -495,22 +495,22 @@ export default withMermaid(
                             text: '6.1.7 The Object Type',
                             link: '/en/ecma2026/06/06_01/clause_06_01_07_The_Object_Type.md',
                           },
-                          {
-                            text: '6.1.7.1 Property Attributes',
-                            link: '/en/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
-                          },
-                          {
-                            text: '6.1.7.2 Object Internal Methods and Internal Slots',
-                            link: '/en/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
-                          },
-                          {
-                            text: '6.1.7.3 Invariants of the Essential Internal Methods',
-                            link: '/en/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
-                          },
-                          {
-                            text: '6.1.7.4 Well-Known Intrinsic Objects',
-                            link: '/en/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
-                          },
+                          // {
+                          //   text: '6.1.7.1 Property Attributes',
+                          //   link: '/en/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.2 Object Internal Methods and Internal Slots',
+                          //   link: '/en/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.3 Invariants of the Essential Internal Methods',
+                          //   link: '/en/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
+                          // },
+                          // {
+                          //   text: '6.1.7.4 Well-Known Intrinsic Objects',
+                          //   link: '/en/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
+                          // },
                         ],
                       },
                     ],
