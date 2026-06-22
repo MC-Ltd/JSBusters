@@ -1,4 +1,0 @@
----
-title: Mythos
----
-# Mythos

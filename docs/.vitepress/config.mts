@@ -1,12 +1,16 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { ecmaPageMap } from './ecma-page-map' // додавання посилань на внутрішні ресурси
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(
   defineConfig({
-    title: 'JSBusters',
+    // title: 'JSBusters',
     description: 'Site about JS-mythos',
     base: '/JSBusters/',
+    appearance: 'dark',
+    // appearance: 'force-dark' // Якщо хочете без можливості перемикання взагалі. Тоді тема завжди темна, перемикач зникає з навбару повністю.
+
     head: [
       ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
       ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
@@ -83,7 +87,8 @@ export default withMermaid(
       uk: {
         label: 'Українська',
         lang: 'uk',
-        title: 'JSBusters',
+        // title: 'JSBusters',
+        title: '',
         description: 'Сайт про JS-міфи',
         themeConfig: {
           nav: [
@@ -96,8 +101,8 @@ export default withMermaid(
               link: '/uk/ecma2026/'
             },
             {
-              text: 'Міфи',
-              link: '/uk/mythos/'
+              text: 'Міфи та магія',
+              link: '/uk/myths&magic/'
             },
             {
               text: 'Про сайт',
@@ -109,6 +114,37 @@ export default withMermaid(
               {
                 text: 'ECMAScript 2026',
                 items: [
+                  {
+                    text: '6 ECMAScript Data Types and Values',
+                    items: [
+                      {
+                        text: '6.1 ECMAScript Language Types',
+                        items: [
+                          {
+                            text: '6.1.7 The Object Type',
+                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_The_Object_Type.md',
+                          },
+                          {
+                            text: '6.1.7.1 Property Attributes',
+                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
+                          },
+                          {
+                            text: '6.1.7.2 Object Internal Methods and Internal Slots',
+                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
+                          },
+                          {
+                            text: '6.1.7.3 Invariants of the Essential Internal Methods',
+                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
+                          },
+                          {
+                            text: '6.1.7.4 Well-Known Intrinsic Objects',
+                            link: '/uk/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  
                   {
                     text: '7 Abstract Operations',
                     items: [
@@ -406,7 +442,8 @@ export default withMermaid(
       en: {
         label: 'English',
         lang: 'en',
-        title: 'JSBusters',
+        // title: 'JSBusters',
+        title: '',
         description: 'Site about JS-mythos',
         themeConfig: {
           nav: [
@@ -419,8 +456,8 @@ export default withMermaid(
               link: '/en/ecma2026/'
             },
             {
-              text: 'Mythos',
-              link: '/en/mythos/'
+              text: 'Myths & magic',
+              link: '/en/myths&magic/'
             },
             {
               text: 'About',
@@ -448,6 +485,37 @@ export default withMermaid(
               {
                 text: 'ECMAScript 2026',
                 items: [
+                  {
+                    text: '6 ECMAScript Data Types and Values',
+                    items: [
+                      {
+                        text: '6.1 ECMAScript Language Types',
+                        items: [
+                          {
+                            text: '6.1.7 The Object Type',
+                            link: '/en/ecma2026/06/06_01/clause_06_01_07_The_Object_Type.md',
+                          },
+                          {
+                            text: '6.1.7.1 Property Attributes',
+                            link: '/en/ecma2026/06/06_01/clause_06_01_07_01_Property_Attributes.md',
+                          },
+                          {
+                            text: '6.1.7.2 Object Internal Methods and Internal Slots',
+                            link: '/en/ecma2026/06/06_01/clause_06_01_07_02_Object_Internal_Methods_and_Internal_Slots.md',
+                          },
+                          {
+                            text: '6.1.7.3 Invariants of the Essential Internal Methods',
+                            link: '/en/ecma2026/06/06_01/clause_06_01_07_03_Invariants_of_the_Essential_Internal_Methods.md',
+                          },
+                          {
+                            text: '6.1.7.4 Well-Known Intrinsic Objects',
+                            link: '/en/ecma2026/06/06_01/clause_06_01_07_04_Well-Known_Intrinsic_Objects.md',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+
                   {
                     text: '7 Abstract Operations',
                     items: [
@@ -751,9 +819,7 @@ export default withMermaid(
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
       siteTitle: 'JSBusters',
-      logo: '/my-logo.svg',
-
-
+      logo: '/logo.png',
 
       // nav: [
       //   { text: 'Home', link: '/' },
@@ -797,20 +863,63 @@ export default withMermaid(
     //   )
     // },
     markdown: {
+      // автоматичне додавання точки входу до посилань на сайт специфікації
+      // config(md) {
+      //   const SPEC_BASE = 'https://tc39.es/ecma262/2026/multipage/'
+      //   md.core.ruler.push('ecma-href-rewrite', (state) => {
+      //     for (const token of state.tokens) {
+      //       if (token.type === 'html_block' || token.type === 'html_inline') {
+      //         token.content = token.content.replace(
+      //           /href="(?!https?:\/\/)([^"]+\.html#[^"]*)"/g,
+      //           `href="${SPEC_BASE}$1"`
+      //         )
+      //       }
+      //     }
+      //     return true
+      //   })
+      // }
+      // автоматичне додавання точки входу до посилань на сайт специфікації
+      // і додавання посилань на внутрішні ресурси
       config(md) {
         const SPEC_BASE = 'https://tc39.es/ecma262/2026/multipage/'
+
         md.core.ruler.push('ecma-href-rewrite', (state) => {
+          const lang = state.env?.relativePath?.startsWith('uk/') ? 'uk' : 'en'
+
           for (const token of state.tokens) {
             if (token.type === 'html_block' || token.type === 'html_inline') {
+              // існуюча заміна на повний URL специфікації
+
+              // token.content = token.content.replace(
+              //   /href="(?!https?:\/\/)([^"]+\.html#([^"]*))"([^>]*>)/g,
+              //   (match, fullPath, anchor, rest) => {
+              //     const specHref = `href="${SPEC_BASE}${fullPath}"`
+              //     const siteEntry = ecmaPageMap[anchor]
+              //     if (siteEntry) {
+              //       const siteHref = `/JSBusters${siteEntry[lang]}`
+              //       return `${specHref}${rest}<a href="${siteHref}" class="site-link" title="На сайті">📖</a>`
+              //     }
+              //     return `${specHref}${rest}`
+              //   }
+              // )
               token.content = token.content.replace(
-                /href="(?!https?:\/\/)([^"]+\.html#[^"]*)"/g,
-                `href="${SPEC_BASE}$1"`
+                /<a ([^>]*)href="(?!https?:\/\/)([^"]+\.html#([^"]*?))"([^>]*)>([\s\S]*?)<\/a>/g,
+                (match, before, fullPath, anchor, after, text) => {
+                  const specTag = `<a ${before}href="${SPEC_BASE}${fullPath}"${after}>${text}</a>`
+                  const siteEntry = ecmaPageMap[anchor]
+                  if (siteEntry) {
+                    const siteHref = `/JSBusters${siteEntry[lang]}`
+                    return `${specTag}<a href="${siteHref}" class="site-link" title="На сайті">📖</a>`
+                  }
+                  return specTag
+                }
               )
             }
           }
           return true
         })
-      }
+
+      },
     },
   })
 )

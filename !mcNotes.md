@@ -6,7 +6,34 @@
 - 7.3.16 TestIntegrityLevel 
 - 7.3.23 EnumerableOwnProperties 
 - 7.3.25 CopyDataProperties
+- 10.1.11 [[OwnPropertyKeys]] ( )
+- 13.2.5.6 Runtime Semantics: PropertyDefinitionEvaluation
+- 14.3.3.2 Runtime Semantics: RestBindingInitialization
+- 25.5.4 JSON.stringify
 
+❮
+❯
+❮❯
+❮Булево/Логічне❯
+❮Об'єкт❯
+
+
+буде
+<u>>>> рівним / у / як / на <<<</u>
+
+<u>>>> є / дорівнює <<<</u>
+<u>>>> code unit / коде-юнітом / кодовою одиницею <<<</u>
+<u>>>>  <<<</u>
+
+<i>є/дорівнює</i>
+
+<i>рівним/у/як/на</i>
+
+є/дорівнює
+
+є рівним
+
+у/як/на
 
 
 

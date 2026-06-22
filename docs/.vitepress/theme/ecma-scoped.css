@@ -103,6 +103,19 @@
 .emu-block var.field::before {
   content: "\2060";
 }
+
+/* ==================================== */
+
+/* стиль для внутрішніх посилань */
+.emu-block .site-link {
+  margin-left: 4px;
+  font-size: 0.8em;
+  text-decoration: none;
+  opacity: 0.6;
+}
+.emu-block .site-link:hover {
+  opacity: 1;
+}
 /* ==================================== */
 .emu-block span[aria-hidden="true"] {
   font-size: 0;
