@@ -7,4 +7,4 @@ date: 2025-06-18
 
 # поки перекладу немає
 
-<!--@include: ../../../../shared/uk/ecma2026/25/25_05/-25_05_04_06_SerializeJSONArray.md-->
+<!--@include: ../../../../shared/uk/ecma2026/25/25_05/_25_05_04_06_SerializeJSONArray.md-->
