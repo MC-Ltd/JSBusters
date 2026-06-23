@@ -12,7 +12,7 @@ export default withMermaid(
     // appearance: 'force-dark' // Якщо хочете без можливості перемикання взагалі. Тоді тема завжди темна, перемикач зникає з навбару повністю.
 
     head: [
-      ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
+      // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
       ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
 
       // Google Fonts
