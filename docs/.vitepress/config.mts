@@ -12,7 +12,7 @@ export default withMermaid(
     // appearance: 'force-dark' // Якщо хочете без можливості перемикання взагалі. Тоді тема завжди темна, перемикач зникає з навбару повністю.
 
     head: [
-      // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
+      // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],v
       ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
 
       // Google Fonts
@@ -119,6 +119,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '6.1 ECMAScript Language Types',
+                        collapsed: true,
                         items: [
                           {
                             text: '6.1.7 The Object Type',
@@ -150,6 +151,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '7.3 Operations on Objects',
+                        collapsed: true,
                         items: [
                           {
                             text: '7.3.15 SetIntegrityLevel ( obj, level )',
@@ -177,6 +179,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '8.6 Miscellaneous',
+                        collapsed: true,
                         items: [
                           {
                             text: '8.6.2 RS: BindingInitialization',
@@ -198,6 +201,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '10.1 Ordinary Object Internal Methods and Internal Slots',
+                        collapsed: true,
                         items: [
                           { 
                             text: '10.1.11 [[OwnPropertyKeys]] ( )',
@@ -222,6 +226,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '13.2.5 Object Initializer',
+                            collapsed: true,
                             items: [
                               {
                                 text: '13.2.5.6 RS: PropertyDefinitionEvaluation',
@@ -242,6 +247,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '14.3.3 Destructuring Binding Patterns',
+                            collapsed: true,
                             items: [
                               {
                                 text: '14.3.3.2 RS: RestBindingInitialization',
@@ -256,6 +262,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '14.7.5 The for-in, for-of, and for-await-of Statements',
+                            collapsed: true,
                             items: [
                               {
                                 text: '14.7.5.5 RS: ForInOfLoopEvaluation',
@@ -285,6 +292,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '20.1 Object Objects',
+                        collapsed: true,
                         items: [
                           {
                             text: '20.1.2 Properties of the Object Constructor',
@@ -365,6 +373,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '25.5 The JSON Object',
+                        collapsed: true,
                         items: [
                           {
                             text: '25.5.4 JSON.stringify ( value [ , replacer [ , space ] ] )',
@@ -406,6 +415,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '28.1 The Reflect Object',
+                        collapsed: true,
                         items: [
                           {
                             text: '28.1.10 Reflect.ownKeys ( target )',
@@ -415,8 +425,8 @@ export default withMermaid(
                       },
                     ],
                   },
-                ]
-              }
+                ],
+              },
             ],
             '/uk/articles/': [
               {
@@ -424,20 +434,27 @@ export default withMermaid(
                 items: [
                   { text: 'List articles', link: '/uk/articles/' },
                   { text: 'Article 1', link: '/uk/articles/article_001' },
-                ]
-              }
+                ],
+              },
             ],
-            '/uk/mythos/': [
+            '/uk/myths&magic/': [
               {
-                text: 'Mythos',
+                text: 'Object',
+                collapsed: true,
                 items: [
-                  { text: 'General questions', link: '/uk/mythos/' },
-                  { text: 'Technical issues', link: '/uk/mythos/technical' },
-                ]
-              }
+                  {
+                    text: 'Порядок ключів в об\'єкті',
+                    link: '/uk/myths&magic/object/order_of_keys_in_an_object'
+                  },
+                  {
+                    text: 'Тест діаграми',
+                    link: '/uk/myths&magic/object_keys_order'
+                  },
+                ],
+              },
             ],
-          }
-        }
+          },
+        },
       },
       en: {
         label: 'English',
@@ -490,6 +507,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '6.1 ECMAScript Language Types',
+                        collapsed: true,
                         items: [
                           {
                             text: '6.1.7 The Object Type',
@@ -521,6 +539,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '7.3 Operations on Objects',
+                        collapsed: true,
                         items: [
                           {
                             text: '7.3.15 SetIntegrityLevel ( obj, level )',
@@ -548,6 +567,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '8.6 Miscellaneous',
+                        collapsed: true,
                         items: [
                           {
                             text: '8.6.2 RS: BindingInitialization',
@@ -569,6 +589,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '10.1 Ordinary Object Internal Methods and Internal Slots',
+                        collapsed: true,
                         items: [
                           { 
                             text: '10.1.11 [[OwnPropertyKeys]] ( )',
@@ -593,6 +614,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '13.2.5 Object Initializer',
+                            collapsed: true,
                             items: [
                               {
                                 text: '13.2.5.6 RS: PropertyDefinitionEvaluation',
@@ -613,6 +635,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '14.3.3 Destructuring Binding Patterns',
+                            collapsed: true,
                             items: [
                               {
                                 text: '14.3.3.2 RS: RestBindingInitialization',
@@ -627,6 +650,7 @@ export default withMermaid(
                         items: [
                           {
                             text: '14.7.5 The for-in, for-of, and for-await-of Statements',
+                            collapsed: true,
                             items: [
                               {
                                 text: '14.7.5.5 RS: ForInOfLoopEvaluation',
@@ -656,6 +680,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '20.1 Object Objects',
+                        collapsed: true,
                         items: [
                           {
                             text: '20.1.2 Properties of the Object Constructor',
@@ -736,6 +761,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '25.5 The JSON Object',
+                        collapsed: true,
                         items: [
                           {
                             text: '25.5.4 JSON.stringify ( value [ , replacer [ , space ] ] )',
@@ -777,6 +803,7 @@ export default withMermaid(
                     items: [
                       {
                         text: '28.1 The Reflect Object',
+                        collapsed: true,
                         items: [
                           {
                             text: '28.1.10 Reflect.ownKeys ( target )',
@@ -798,7 +825,7 @@ export default withMermaid(
                 ]
               }
             ],
-            '/en/mythos/': [
+            '/en/myths&magic/': [
               {
                 text: 'Mythos',
                 items: [
@@ -819,7 +846,7 @@ export default withMermaid(
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
       siteTitle: 'JSBusters',
-      logo: '/logo.png',
+      logo: '/favicon.ico?v=2',
 
       // nav: [
       //   { text: 'Home', link: '/' },
