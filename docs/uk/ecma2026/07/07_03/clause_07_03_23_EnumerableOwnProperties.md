@@ -1,5 +1,5 @@
 ---
-# layout: page
+layout: page
 ecmaFooter: true
 title: 'EnumerableOwnProperties()'
 date: 2025-06-18
