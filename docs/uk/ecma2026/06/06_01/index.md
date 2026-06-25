@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 6.1.7 The Object Type
-      link: /uk/ecma2026/06/06_01/06_01_07_The_Object_Type.md
+      link: /uk/ecma2026/06/06_01/clause_06_01_07_The_Object_Type.md
 
 ---
 

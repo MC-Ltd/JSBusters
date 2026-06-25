@@ -4,8 +4,9 @@ title: About
 
 # About
 
-
-
+<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2rem;">
+  <img src="../public/images/500x499.png" alt="Опис" width="500" class="my-image" />
+</div>
 
 ### Use of ECMAScript Materials
 

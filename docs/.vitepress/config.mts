@@ -1,26 +1,30 @@
 import { defineConfig } from 'vitepress'
+/* підключення модулю "mermaid-діаграм" */
 import { withMermaid } from 'vitepress-plugin-mermaid'
-import { ecmaPageMap } from './ecma-page-map' // додавання посилань на внутрішні ресурси
+/* підключення модулю "додавання посилань на внутрішні сторінки" */
+import { ecmaPageMap } from './ecma-page-map'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(
   defineConfig({
     // title: 'JSBusters',
-    description: 'Site about JS-mythos',
+    description: 'Site about JS\'s myths & magic',
     base: '/JSBusters/',
-    appearance: 'dark',
-    // appearance: 'force-dark' // Якщо хочете без можливості перемикання взагалі. Тоді тема завжди темна, перемикач зникає з навбару повністю.
+    appearance: 'dark', // за замовчанням вантажимо темну тему. 'force-dark' -я кщо хочете без можливості перемикання взагалі, перемикач зникає з навбару повністю.
 
     head: [
-      // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],v
-      ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
+      // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
+      // ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
+      ['link', { rel: 'icon', href: '/JSBusters/public/favicon.ico' }],
 
-      // Google Fonts
+      /* Google Fonts */
       ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
       ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap' }],
-      // FontAwesome
+      
+      /* FontAwesome */
       ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' }],
-      // ECMAScript fonts
+      
+      /* ECMAScript fonts */
       // ['link', { rel: 'stylesheet', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexMono-Bold-SlashedZero.woff2' }],
       // ['link', { rel: 'stylesheet', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexMono-BoldItalic-SlashedZero.woff2' }],
       // ['link', { rel: 'stylesheet', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexMono-Regular-SlashedZero.woff2' }],
@@ -31,11 +35,12 @@ export default withMermaid(
       ['link', { rel: 'preload', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexMono-Regular-SlashedZero.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
       ['link', { rel: 'preload', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexSans-Bold-SlashedZero.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
       ['link', { rel: 'preload', href: 'https://tc39.es/ecma262/assets/fonts/IBMPlexSans-Regular-SlashedZero.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
-
-      // for cyrillic symbol https://fonts.google.com/specimen/IBM+Plex+Serif
+      
+      /* for cyrillic symbol https://fonts.google.com/specimen/IBM+Plex+Serif */
       // ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com' }], // crossorigin>
       // ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' }],
-
+      
+      /* підключення google-аналітики */
       ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-0X1WBFSVS3' }],
       ['script', {}, /*`
         window.dataLayer = window.dataLayer || [];
@@ -54,7 +59,8 @@ export default withMermaid(
           }
         `
       ],
-
+      
+      /* підключення umami-аналітики */
       [
         'script',
         {
@@ -62,7 +68,7 @@ export default withMermaid(
           src: 'https://cloud.umami.is/script.js',
           'data-website-id': '76fa3cd1-28e2-4a21-ac21-c1c569ae0057',
           'data-domains': 'mc-ltd.github.io'
-       }
+        },
       ],
     ],
 
@@ -87,28 +93,32 @@ export default withMermaid(
       uk: {
         label: 'Українська',
         lang: 'uk',
-        // title: 'JSBusters',
-        title: '',
-        description: 'Сайт про JS-міфи',
+        title: '', // 'JSBusters',
+        description: 'Сайт про міфи та магію JS',
         themeConfig: {
           nav: [
             {
               text: 'Статті',
-              link: '/uk/articles/'
-            },
-            {
-              text: 'ECMAScript 2026',
-              link: '/uk/ecma2026/'
+              link: '/uk/articles/',
             },
             {
               text: 'Міфи та магія',
-              link: '/uk/myths&magic/'
+              link: '/uk/myths&magic/',
+            },
+            {
+              text: 'ECMAScript 2026',
+              link: '/uk/ecma2026/',
+            },
+            {
+              text: 'FAQ',
+              link: '/uk/faq',
             },
             {
               text: 'Про сайт',
-              link: '/uk/about'
+              link: '/uk/about',
             },
           ],
+
           sidebar: {
             '/uk/ecma2026/': [
               {
@@ -429,11 +439,21 @@ export default withMermaid(
               },
             ],
             '/uk/articles/': [
+              // {
+              //   text: 'Articles',
+              //   items: [
+              //     { text: 'List articles', link: '/uk/articles/' },
+              //     { text: 'Article 1', link: '/uk/articles/article_001' },
+              //   ],
+              // },
               {
-                text: 'Articles',
+                text: 'Object',
+                collapsed: true,
                 items: [
-                  { text: 'List articles', link: '/uk/articles/' },
-                  { text: 'Article 1', link: '/uk/articles/article_001' },
+                  {
+                    text: 'Порядок ключів в об\'єкті',
+                    link: '/uk/articles/object/order_of_keys_in_an_object',
+                  },
                 ],
               },
             ],
@@ -442,45 +462,71 @@ export default withMermaid(
                 text: 'Object',
                 collapsed: true,
                 items: [
-                  {
-                    text: 'Порядок ключів в об\'єкті',
-                    link: '/uk/myths&magic/object/order_of_keys_in_an_object'
-                  },
+                  // {
+                  //   text: 'Порядок ключів в об\'єкті',
+                  //   link: '/uk/myths&magic/object/order_of_keys_in_an_object',
+                  // },
                   {
                     text: 'Тест діаграми',
-                    link: '/uk/myths&magic/object_keys_order'
+                    link: '/uk/myths&magic/object_keys_order',
                   },
                 ],
               },
             ],
           },
+          
+          // lastUpdated: {
+          //   text: 'Обновлено', 
+          //   formatOptions: {
+          //     dateStyle: 'full',
+          //     timeStyle: 'medium',
+          //   },
+          // },
+          
+          sidebarMenuLabel: 'Меню',
+          returnToTopLabel: 'Повернутися на початок',
+          // externalLinkIcon: true,
+          
+          docFooter: {
+            prev: 'Попередня сторінка',
+            next: 'Наступна сторінка',
+          },
+
+          footer: {
+            message: 'Матеріали сайту розповсюджуються за ліцензією <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.',
+            copyright: '© 2026 JSBusters',
+          },
         },
       },
       en: {
         label: 'English',
-        lang: 'en',
-        // title: 'JSBusters',
-        title: '',
-        description: 'Site about JS-mythos',
+        lang: 'en',        
+        title: '', // 'JSBusters',
+        // description: 'Site about JS\'s myths & magic',
         themeConfig: {
           nav: [
             {
               text: 'Articles',
-              link: '/en/articles/'
-            },
-            {
-              text: 'ECMAScript 2026',
-              link: '/en/ecma2026/'
+              link: '/en/articles/',
             },
             {
               text: 'Myths & magic',
-              link: '/en/myths&magic/'
+              link: '/en/myths&magic/',
+            },
+            {
+              text: 'ECMAScript 2026',
+              link: '/en/ecma2026/',
+            },
+            {
+              text: 'FAQ',
+              link: '/en/faq',
             },
             {
               text: 'About',
-              link: '/en/about'
+              link: '/en/about',
             },
           ],
+
           sidebar: {
             '/en/ecma2026/': [
               // {
@@ -817,42 +863,67 @@ export default withMermaid(
               }
             ],
             '/en/articles/': [
+              // {
+              //   text: 'Articles',
+              //   items: [
+              //     { text: 'List articles', link: '/en/articles/' },
+              //     { text: 'Article 1', link: '/en/articles/article_001' },
+              //   ]
+              // }
               {
-                text: 'Articles',
+                text: 'Object',
+                collapsed: true,
                 items: [
-                  { text: 'List articles', link: '/en/articles/' },
-                  { text: 'Article 1', link: '/en/articles/article_001' },
-                ]
-              }
+                  {
+                    text: 'Order of keys in an object',
+                    link: '/uk/articles/object/order_of_keys_in_an_object',
+                  },
+                ],
+              },
             ],
             '/en/myths&magic/': [
-              {
-                text: 'Mythos',
-                items: [
-                  { text: 'General questions', link: '/en/mythos/' },
-                  { text: 'Technical issues', link: '/en/mythos/technical' },
-                ]
-              }
+              // {
+              //   text: 'Mythos',
+              //   items: [
+              //     { text: 'General questions', link: '/en/mythos/' },
+              //     { text: 'Technical issues', link: '/en/mythos/technical' },
+              //   ]
+              // }
             ],
             // те саме для /en/
-          }
-        }
-      }
+          },
+          
+          // lastUpdated: {
+          //   text: 'Last update',
+          //   formatOptions: {
+          //     dateStyle: 'full',
+          //     timeStyle: 'medium',
+          //   },
+          // },
+          
+          footer: {
+            message: 'Site materials are distributed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.',
+            copyright: '© 2026 JSBusters',
+          },
+        },
+      },
     },
+
+    /* підключення mermaid-діаграм */
     mermaid: {
-      theme: 'default'
+      theme: 'default',
     },
 
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
-      siteTitle: 'JSBusters',
-      logo: '/favicon.ico?v=2',
+      siteTitle: 'JSBusters', // false - якщо треба вимкнути напис біля лого
+      logo: '/favicon.ico?v=2', // файл логотипу для відображення в навігаційній панелі прямо перед заголовком сайту
 
       // nav: [
       //   { text: 'Home', link: '/' },
       //   { text: 'Examples', link: '/markdown-examples' }
       // ],
-
+      
       // sidebar: [
       //   {
       //     text: 'Розділ 1',
@@ -869,15 +940,25 @@ export default withMermaid(
       //     ]
       //   }
       // ],
-
+      
       // socialLinks: [
       //   { icon: 'github', link: 'https://github.com/MC-Ltd/JSBusters' },
       // ],
       
-      search: { provider: 'local' },
+      lastUpdated: {
+        text: 'Last update',
+        formatOptions: {
+          dateStyle: 'full',
+          timeStyle: 'medium',
+        },
+      },
+
+      search: {
+        provider: 'local'
+      },
     },
 
-    // додаємо до посилань специфікації єдину точку входу
+    /* додаємо до посилань специфікації єдину точку входу */
     // transformHtml(code) {
     //   const SPEC_BASE = 'https://tc39.es/ecma262/2026/multipage/'
     //   return code.replace(
