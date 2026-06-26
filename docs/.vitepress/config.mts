@@ -11,7 +11,8 @@ export default withMermaid(
     description: 'Site about JS\'s myths & magic',
     base: '/JSBusters/',
     appearance: 'dark', // за замовчанням вантажимо темну тему. 'force-dark' -я кщо хочете без можливості перемикання взагалі, перемикач зникає з навбару повністю.
-
+    ignoreDeadLinks: true,
+    
     head: [
       // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
       // ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
