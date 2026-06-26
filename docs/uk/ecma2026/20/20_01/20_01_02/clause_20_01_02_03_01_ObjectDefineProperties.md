@@ -2,7 +2,7 @@
 # layout: page
 ecmaFooter: true
 title: 'ObjectDefineProperties()'
-date: 2025-06-18
+date: 2026-06-18
 ---
 
 # ObjectDefineProperties()

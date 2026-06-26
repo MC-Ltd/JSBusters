@@ -15,7 +15,7 @@ export default withMermaid(
     head: [
       // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/JSBusters/public/favicon.svg' }],
       // ['link', { rel: 'alternate icon', href: '/JSBusters/public/favicon.ico' }],
-      ['link', { rel: 'icon', href: '/JSBusters/public/favicon.ico' }],
+      ['link', { rel: 'icon', href: '/JSBusters/favicon.ico' }], // '/JSBusters/public/favicon.ico'
 
       /* Google Fonts */
       ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -954,7 +954,7 @@ export default withMermaid(
       },
 
       search: {
-        provider: 'local'
+        provider: 'local',
       },
     },
 

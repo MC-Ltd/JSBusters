@@ -2,7 +2,7 @@
 # layout: page
 ecmaFooter: true
 title: 'ForIn/OfBodyEvaluation()'
-date: 2025-06-18
+date: 2026-06-18
 ---
 
 # поки перекладу немає

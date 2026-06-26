@@ -2,7 +2,7 @@
 # layout: page
 ecmaFooter: true
 title: "Порядок ключів в об'єкті"
-date: 2025-06-22
+date: 2026-06-22
 ---
 
 # Порядок ключів в об'єкті
@@ -71,7 +71,7 @@ The value of the `length` property is a nonnegative integer with a value less th
 ::: info Переклад
 Значення властивості `length` екземпляра Array представляє кількість слотів у цьому масиві. Значення — це беззнакове 32-бітове ціле число, яке завжди чисельно більше за найвищий індекс у масиві. ...
 <br><br>
-Від’ємне ціле число менше за 2<sup>32</sup>. ...
+Невід’ємне ціле число менше за 2<sup>32</sup>. ...
 <br><br>
 Значення властивості `length` є невід’ємним цілим числом зі значенням менше за 2<sup>32</sup>. ...
 <br><br>
@@ -102,7 +102,7 @@ The maximum allowed array length depends on the platform, browser and browser ve
 
 Давайте подивимося на прикладі:
 
-```javascript
+```js
 var obj = {
     [Symbol("ID2")]: "Symbol('ID2')",
     [Symbol("ID1")]: "Symbol('ID1')",
@@ -236,7 +236,7 @@ Object {
 
 Тож давайте звернемося до специфікації ECMAScript 2026, а конкретніше до її розділів в яких описана послідовність перебору ключів:
 
-::: details Читати тут
+::: details ECMAScript {open}
 <!--@include: ../../../shared/uk/ecma2026/10/10_01/10_01_11_OwnPropertyKeys.md-->
 
 <!--@include: ../../../shared/uk/ecma2026/10/10_01/10_01_11_01_OrdinaryOwnPropertyKeys.md-->
@@ -252,7 +252,7 @@ Object {
 Для остаточного розуміння попереднього розділу специфікації ECMAScript 2026 нам залишилося зрозуміти "що таке індекси масиву".
 І ми можемо знайти відповідь у наступному розділі, в якому нас цікавить визначення "*Array index ❮Індекс масиву❯*" і "ПРИМІТКА":
 
-::: details Читати тут
+::: details ECMAScript {open}
 <!--@include: ../../../shared/uk/ecma2026/06/06_01/06_01_07_The_Object_Type.md-->
 :::
 

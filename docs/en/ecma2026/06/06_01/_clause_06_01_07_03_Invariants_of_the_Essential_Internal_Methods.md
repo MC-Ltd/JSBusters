@@ -2,7 +2,7 @@
 # layout: page
 ecmaFooter: true
 title: 'Invariants of the Essential Internal Methods'
-date: 2025-06-18
+date: 2026-06-18
 ---
 
 # Invariants of the Essential Internal Methods
